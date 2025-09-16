@@ -1,0 +1,31 @@
+#include<iostream>
+#include <vector>
+
+using namespace std;
+
+int main(){
+    int n, m;
+    cin>>n>>m;
+    
+    vector <int> P(n);
+    
+    for (int i=0; i<n; i++){
+        cin>>P[i];
+    }
+    
+    for (int i=0; i<n-1; i++){
+        int mi = i;
+        for (int j=i+1; j<n; j++){
+            if (P[j] < P[mi]) mi=j;
+        }
+        swap (P[i], P[mi]);
+    }
+
+    int s=0, f=n-1, c=0;
+    while (f - s >= 0){
+        if (P[s] + P[f] <= m) s++;
+        c++;
+        f--;
+    }
+    cout<<c;
+}
