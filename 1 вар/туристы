@@ -28,4 +28,20 @@ int main(){
         f--;
     }
     cout<<c;
+    /*
+    sort(w.begin(), w.end());
+
+    int  =0;
+    int s=0, f=n-1;
+    while (s < f) {
+        if (P[s] + P[f] <= m) {
+            c++;
+            s++;
+        } 
+        else c++;
+        f--;
+    }
+    if (s == f) c++;
+    cout<<c;
+    */
 }
