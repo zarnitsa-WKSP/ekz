@@ -20,6 +20,7 @@ int main(){
         }
         swap (P[i], P[mi]);
     }
+    sort(w.begin(), w.end());
 
     int s=0, f=n-1, c=0;
     while (f - s >= 0){
